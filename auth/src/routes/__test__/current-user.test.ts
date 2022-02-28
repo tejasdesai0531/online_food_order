@@ -5,8 +5,8 @@ it('responds with details about the current user', async () => {
   const token = await global.signin();
 
   const response = await request(app)
-    .post('/api/users/currentuser')
-    .set('authorization', token)
+    .get('/api/users/currentuser')
+    .set('Authorization', token )
     .send()
     .expect(200);
 

@@ -19,10 +19,6 @@ export const currentUser = (
   res: Response,
   next: NextFunction
 ) => {
-  console.log(req.headers)
-  console.log(req.headers)
-  console.log('inside common')
-
   if (!req.headers.authorization) {
     return next();
   }
